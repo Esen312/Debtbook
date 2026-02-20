@@ -1,0 +1,233 @@
+.details-container {
+  max-width: 720px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.details-title {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.details-item {
+  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.details-item strong {
+  display: inline-block;
+  min-width: 120px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.details-input,
+.details-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-top: 6px;
+  font-size: 15px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.details-input:focus,
+.details-textarea:focus {
+  outline: none;
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.15);
+}
+
+.details-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Бейджи статуса */
+.status-paid,
+.status-unpaid {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-paid {
+  background: #e6f8ed;
+  color: #28a745;
+}
+
+.status-unpaid {
+  background: #fde8e8;
+  color: #e63946;
+}
+
+/* Кнопки */
+.details-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn svg {
+  font-size: 18px;
+}
+
+/* Разные цвета */
+.edit-btn {
+  background: #eef2ff;
+  color: #4f6ef7;
+}
+
+.edit-btn:hover {
+  background: #dbe4ff;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: #ffe5e5;
+  color: #e63946;
+}
+
+.delete-btn:hover {
+  background: #ffd6d6;
+  transform: translateY(-2px);
+}
+
+.save-btn {
+  background: #e9fbee;
+  color: #28a745;
+}
+
+.save-btn:hover {
+  background: #d3f6dc;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: #f2f2f2;
+  color: #555;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* 🌙 Тёмный режим */
+body.dark-mode .details-container {
+  background: #2e2e40;
+  color: #f5f5f5;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .details-title {
+  color: #ffffff;
+  border-bottom: 2px solid #444;
+}
+
+body.dark-mode .details-item strong {
+  color: #ddd;
+}
+
+body.dark-mode .details-input,
+body.dark-mode .details-textarea {
+  background: #3a3a4f;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+body.dark-mode .details-input::placeholder,
+body.dark-mode .details-textarea::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+body.dark-mode .details-input:focus,
+body.dark-mode .details-textarea:focus {
+  border-color: #6a8dff;
+  box-shadow: 0 0 0 3px rgba(106, 141, 255, 0.3);
+}
+
+/* Статусы в тёмном режиме */
+body.dark-mode .status-paid {
+  background: #1e3a2f;
+  color: #4ade80;
+}
+
+body.dark-mode .status-unpaid {
+  background: #3b1f1f;
+  color: #f87171;
+}
+
+/* Кнопки в тёмном режиме */
+body.dark-mode .edit-btn {
+  background: #2d3a6e;
+  color: #91a4ff;
+}
+
+body.dark-mode .edit-btn:hover {
+  background: #3d4a7e;
+}
+
+body.dark-mode .delete-btn {
+  background: #4a1f1f;
+  color: #ff6b6b;
+}
+
+body.dark-mode .delete-btn:hover {
+  background: #5c2a2a;
+}
+
+body.dark-mode .save-btn {
+  background: #1e3a2f;
+  color: #4ade80;
+}
+
+body.dark-mode .save-btn:hover {
+  background: #285646;
+}
+
+body.dark-mode .cancel-btn {
+  background: #444;
+  color: #ccc;
+}
+
+body.dark-mode .cancel-btn:hover {
+  background: #555;
+}

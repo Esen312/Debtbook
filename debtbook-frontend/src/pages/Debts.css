@@ -1,0 +1,401 @@
+/* Общий фон страницы */
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #f3f6fb, #e9ecf5);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Контейнер */
+.table-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Заголовки */
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+}
+
+/* Поиск */
+.search-bar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  width: 97%;
+  max-width: none; /* убираем ограничение */
+  padding: 12px 15px;
+  border: 1px solid #dcdfe6;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+
+.search-input:focus {
+  outline: none;
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.15);
+}
+
+/* Форма */
+.form-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.form-input {
+  padding: 12px 15px;
+  border: 1px solid #dcdfe6;
+  border-radius: 12px;
+  font-size: 14px;
+  flex: 1;
+  transition: 0.2s;
+}
+
+.form-input:focus {
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.15);
+  outline: none;
+}
+
+.submit-btn {
+  background: #4f6ef7;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: #3a55d8;
+}
+
+/* Таблица */
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.data-table thead th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7a7a7a;
+  padding: 10px 15px;
+}
+
+.table-row {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease;
+}
+
+.table-row:hover {
+  transform: translateY(-2px);
+  background: #fafbff;
+}
+
+.table-cell {
+  padding: 15px;
+  font-size: 14px;
+  border-bottom: none;
+}
+
+.amount-cell {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.edit-input {
+  width: 100px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Статус */
+.status-paid {
+  color: #28c76f;
+  font-weight: 600;
+}
+
+.status-unpaid {
+  color: #ff4d4f;
+  font-weight: 600;
+}
+
+/* Действия */
+.actions-cell {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  background: #f5f7fb;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn:hover {
+  background: #e1e7ff;
+  color: #4f6ef7;
+}
+
+.delete-btn:hover {
+  background: #ffe1e1;
+  color: #ff4d4f;
+}
+
+/* Пагинация */
+.pagination {
+  margin-top: 25px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.page-btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #dcdfe6;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.page-btn.active {
+  background: #4f6ef7;
+  color: white;
+  font-weight: 600;
+}
+
+.page-btn:hover {
+  background: #f0f3ff;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 12px;
+  background: #f5f7fb;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 18px;
+}
+
+.icon-btn:hover {
+  transform: scale(1.05);
+}
+
+.edit-btn:hover {
+  background: #e1e7ff;
+  color: #4f6ef7;
+}
+
+.delete-btn:hover {
+  background: #ffe1e1;
+  color: #ff4d4f;
+}
+
+.link {
+  text-decoration: none;
+  color: #333; /* или #2d2d2d, чтобы как в макете */
+  font-weight: 500;
+  transition: 0.2s;
+
+}
+
+.link:hover {
+  color: #4f6ef7; /* при наведении лёгкий акцент */
+}
+/* Контейнер фильтра */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Лейбл */
+.filter-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+/* Стилизация select */
+.filter-select {
+  appearance: none; /* убираем стандартные стрелки */
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  border-radius: 12px;
+  padding: 12px 40px 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline: none;
+
+  /* кастомная стрелка */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 24 24' fill='none' stroke='%234f6ef7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+}
+
+/* hover эффект */
+.filter-select:hover {
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.1);
+}
+
+/* при фокусе */
+.filter-select:focus {
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 4px rgba(79, 110, 247, 0.2);
+}
+
+/* сами option */
+.filter-select option {
+  font-weight: 500;
+  padding: 10px;
+}
+
+/* 🌙 Тёмный режим */
+body.dark-mode {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+  color: #f0f0f0;
+}
+
+body.dark-mode .table-container {
+  background: #2c2c3c;
+  color: #f0f0f0;
+}
+
+body.dark-mode .page-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .data-table thead th {
+  color: #bbb;
+}
+
+body.dark-mode .table-row {
+  background: #3a3a4d;
+}
+
+body.dark-mode .table-row:hover {
+  background: #4a4a60;
+}
+
+body.dark-mode .table-cell {
+  color: #f0f0f0;
+}
+
+body.dark-mode .form-input,
+body.dark-mode .search-input,
+body.dark-mode .filter-select,
+body.dark-mode .filter-label {
+  background: #2e2e40;
+  color: #fff;
+}
+
+/* Цвет текста плейсхолдера */
+body.dark-mode .form-input::placeholder,
+body.dark-mode .search-input::placeholder {
+  color: #bbb; /* можно светло-серый, например */
+  opacity: 1; /* чтобы браузер не делал его прозрачным */
+}
+
+body.dark-mode .submit-btn {
+  background: #6c63ff;
+}
+
+body.dark-mode .submit-btn:hover {
+  background: #5a52e0;
+}
+
+body.dark-mode .link {
+  color: #cfcfff;
+}
+
+/* ✅ Свитч */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #4f6ef7;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
